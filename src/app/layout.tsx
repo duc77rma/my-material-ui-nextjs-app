@@ -1,12 +1,10 @@
-import * as React from 'react'
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
-import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import theme from '@/theme'
-import { Inter } from 'next/font/google'
-import { Box, Stack } from '@mui/material'
-import { Footer, Header } from '@/components/layout'
 import { MainLayout } from '@/layouts'
+import theme from '@/theme'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material/styles'
+import { Inter } from 'next/font/google'
+import { ReactNode, useEffect, useState } from 'react'
 // import { createEmotionCache } from '@/utils'
 // import { CacheProvider } from '@emotion/react'
 
@@ -17,7 +15,7 @@ const inter = Inter({
 	display: 'swap',
 })
 
-export default function RootLayout(props: { children: React.ReactNode }) {
+export default function RootLayout(props: { children: ReactNode }) {
 	return (
 		<html lang="en" className={inter.className}>
 			<body>

@@ -2,10 +2,15 @@ import { Box } from '@mui/material'
 import Link from 'next/link'
 import * as React from 'react'
 
-export function Header() {
+export function HeaderMobile() {
 	return (
-		<Box className="header" py={2} textAlign="center">
-			<Link href="/" legacyBehavior>
+		<Box
+			display={{
+				xs: 'block',
+				lg: 'none',
+			}}
+		>
+			{/* <Link href="/" legacyBehavior>
 				<a>Home</a>
 			</Link>
 			<Link href="/blog" legacyBehavior>
@@ -13,7 +18,8 @@ export function Header() {
 			</Link>
 			<Link href="/works" legacyBehavior>
 				<a>Works</a>
-			</Link>
+			</Link> */}
+			HeaderMobile
 		</Box>
 	)
 }
