@@ -3,7 +3,7 @@ import { red } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { Heebo } from 'next/font/google'
 
-const heebo = Heebo({
+export const heebo = Heebo({
 	weight: ['300', '500', '700'],
 	subsets: ['latin'],
 	display: 'swap',

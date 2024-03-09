@@ -10,14 +10,9 @@ import { ReactNode, useEffect, useState } from 'react'
 
 // const clientSideEmotionCache = createEmotionCache();
 
-const inter = Inter({
-	subsets: ['latin'],
-	display: 'swap',
-})
-
 export default function RootLayout(props: { children: ReactNode }) {
 	return (
-		<html lang="en" className={inter.className}>
+		<html lang="en">
 			<body>
 				<AppRouterCacheProvider options={{ enableCssLayer: true, key: 'css' }}>
 					{/* <CacheProvider value={clientSideEmotionCache}> */}

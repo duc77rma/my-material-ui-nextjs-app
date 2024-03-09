@@ -19,11 +19,17 @@ export function PostCard({ data }: IPostCardProps) {
 					{data.title}
 				</Typography>
 
-				<Typography variant="body1" sx={{ display: 'flex' }} pt={1} pb={1}>
-					{format(data.publishedDate, 'dd MMM yyyy')}
+				<Stack flexDirection="row" my={2}>
+					<Typography variant="body1" pt={1} pb={1}>
+						{format(data.publishedDate, 'dd MMM yyyy')}
+					</Typography>
+
 					<Divider orientation="vertical" sx={{ mx: 2 }} flexItem />
-					{data.tagList.join(', ')}
-				</Typography>
+
+					<Typography variant="body1" pt={1} pb={1}>
+						{data.tagList.join(', ')}
+					</Typography>
+				</Stack>
 
 				<Typography variant="body2">{data.description}</Typography>
 			</CardContent>
